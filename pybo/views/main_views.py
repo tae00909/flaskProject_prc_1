@@ -1,4 +1,5 @@
-from flask import Blueprint
+from flask import Blueprint, url_for
+from werkzeug.utils import redirect
 
 # 블루 프린트
 # 'main'(이름), __name__(모듈명), url_prefix='/'(URL 프리픽스)
@@ -14,4 +15,4 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
-    return 'Pybo, index'
+    return redirect(url_for('question._list'))
