@@ -35,10 +35,11 @@ def create_app():
     #     return 'Hello, pybo!'
 
     # 블루 프린트
-    from .views import main_views, question_views
+    from .views import main_views, question_views, answer_views
     # 블루 프린트를 사용하도록 변경
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
+    app.register_blueprint(answer_views.bp)
 
     return app
 
