@@ -11,6 +11,7 @@ class Question(db.Model):
     content = db.Column(db.Text(), nullable=False)
     create_date = db.Column(db.DateTime(), nullable=False)
 
+
 class Answer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # question_id 속성은 질문 모델과 연결하려고 추가했다.
