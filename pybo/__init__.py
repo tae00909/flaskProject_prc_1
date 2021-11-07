@@ -19,7 +19,10 @@ def create_app():
     app = Flask(__name__)
 
     # config.py 파일에 작성한 항목을 app.config 환경변수로 부리기 위해
-    app.config.from_object(config)
+    # app.config.from_object(config)
+    #"환경 변수 APP_CONFIG_FILE에 정의된 파일을 환경 파일로 사용
+    app.config.from_envvar('APP_CONFIG_FILE')
+
 
     # ORM
     # db, migrate를 init_app 메서드를 이용해 초기화
